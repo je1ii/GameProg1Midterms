@@ -5,8 +5,8 @@ using UnityEngine;
 public class FirstChick : MonoBehaviour
 {
     public GameObject firstChick;
-    public Transform spawnPoint;
     public GameObject hen;
+    public Transform spawnPoint;
     public float endTime = 10.0f;
     // Start is called before the first frame update
     void Start()
@@ -27,8 +27,7 @@ public class FirstChick : MonoBehaviour
 
     void timerEnded()
     {
-        GameObject _hen = Instantiate(hen,spawnPoint.position,Quaternion.identity);
+        GameObject _hen = Instantiate(hen,spawnPoint.position,spawnPoint.rotation);
         firstChick.SetActive(false);
-        _hen.SetActive(true);
     }
 }

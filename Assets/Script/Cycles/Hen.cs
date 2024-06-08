@@ -42,8 +42,7 @@ public class HenCycle : MonoBehaviour
 
         for(int i=1;i<randomCount;i++)
         {
-            GameObject _egg = Instantiate(egg,spawnPoint.position,Quaternion.identity);
-            _egg.SetActive(true);
+            GameObject _egg = Instantiate(egg, spawnPoint.position, spawnPoint.rotation);
         }
 
     }

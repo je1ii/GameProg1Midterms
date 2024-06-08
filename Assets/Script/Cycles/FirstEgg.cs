@@ -5,13 +5,13 @@ using UnityEngine;
 public class EggCycle : MonoBehaviour
 {
     public GameObject firstEgg;
+    public GameObject firstChick;
     public Transform  spawnPoint;
-    public GameObject chick;
     public float endTime = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,9 +28,9 @@ public class EggCycle : MonoBehaviour
 
     void timerEnded()
     {
-        GameObject _chick = Instantiate(chick,spawnPoint.position,Quaternion.identity);
         firstEgg.SetActive(false);
-        _chick.SetActive(true);
+        firstChick.transform.position = spawnPoint.position;
+        firstChick.SetActive(true);
     }
 }
     

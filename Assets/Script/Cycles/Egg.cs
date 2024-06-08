@@ -27,8 +27,7 @@ public class Egg : MonoBehaviour
 
     void timerEnded()
     {
-        GameObject _chick = Instantiate(chick,spawnPoint.position,Quaternion.identity);
+        GameObject _chick = Instantiate(chick,spawnPoint.position,spawnPoint.rotation);
         Destroy(egg);
-        _chick.SetActive(true);
     }
 }

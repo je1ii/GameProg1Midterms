@@ -28,8 +28,7 @@ public class Chick : MonoBehaviour
     void timerEnded()
     {
         GameObject _chicken = chicken[Random.Range(0,chicken.Length)];
-        Instantiate(_chicken,spawnPoint.position,Quaternion.identity);
+        Instantiate(_chicken,spawnPoint.position,spawnPoint.rotation);
         Destroy(chick);
-        _chicken.SetActive(true);
     }
 }
